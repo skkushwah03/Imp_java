@@ -1,0 +1,287 @@
+✅ Q1. What are the data types in Java?
+
+Answer:
+Java me 2 types ke data types hote hain:
+
+1️⃣ Primitive Data Types (8)
+
+byte
+
+short
+
+int
+
+long
+
+float
+
+double
+
+char
+
+boolean
+
+👉 Ye values directly store karte hain.
+
+2️⃣ Non-Primitive Data Types
+
+String
+
+Array
+
+Class
+
+Object
+
+Interface
+
+👉 Ye reference store karte hain.
+
+✅ Q2. What are wrapper classes?
+
+Answer:
+Wrapper classes primitive data types ko object me convert karte hain.
+
+Primitive	Wrapper
+int	Integer
+char	Character
+double	Double
+boolean	Boolean
+
+👉 Example:
+
+int a = 10;
+Integer b = a; // Autoboxing
+
+✅ Q3. Are there dynamic arrays in Java?
+
+Answer:
+❌ Java me array fixed size ke hote hain.
+✅ But ArrayList dynamic hota hai.
+
+👉 Example:
+
+ArrayList<Integer> list = new ArrayList<>();
+
+✅ Q4. What is JVM?
+
+Answer:
+JVM (Java Virtual Machine) Java bytecode ko machine code me convert karta hai.
+
+👉 JVM:
+
+Code execute karta hai
+
+Memory manage karta hai
+
+Platform independent banata hai
+
+✅ Q5. Why is Java platform-independent?
+
+Answer:
+Java code pehle bytecode (.class) me convert hota hai.
+Ye bytecode har OS ke JVM par run ho jata hai.
+
+👉 Write Once, Run Anywhere (WORA)
+
+✅ Q6. What are local and global variables?
+
+Answer:
+
+🔹 Local Variable
+
+Method ke andar declare hota hai
+
+Sirf wahi accessible hota hai
+
+🔹 Global Variable (Instance variable)
+
+Class ke andar declare hota hai
+
+Object ke through access hota hai
+
+✅ Q7. What is data encapsulation?
+
+Answer:
+Encapsulation = Data + Methods ko ek unit me wrap karna
+
+👉 Achieved using:
+
+private variables
+
+public getters & setters
+
+Benefits:
+
+Data security
+
+Code control
+
+✅ Q8. What is function overloading?
+
+Answer:
+Same method name, different parameters, same class.
+
+add(int a, int b)
+add(double a, double b)
+
+
+👉 Compile-time polymorphism
+
+✅ Q9. What is function overriding?
+
+Answer:
+Subclass me parent class method ka new implementation dena.
+
+👉 Rules:
+
+Same method name
+
+Same parameters
+
+IS-A relationship
+
+👉 Runtime polymorphism
+
+✅ Q10. Why is the main method static in Java?
+
+Answer:
+JVM bina object banaye main() ko call karta hai.
+Isliye main() static hota hai.
+
+✅ Q11. Difference between throw and throws?
+throw	throws
+Exception explicitly throw karta hai	Exception declare karta hai
+Method ke andar use hota hai	Method signature me
+Single exception	Multiple exceptions
+✅ Q12. What is a singleton class?
+
+Answer:
+Singleton class wo hoti hai jiska sirf ek object banta hai.
+
+👉 Steps:
+
+Private constructor
+
+Static object
+
+Public static method
+
+✅ Q13. Does every try block need a catch block?
+
+Answer:
+❌ Nahi
+✅ try ke saath either catch ya finally hona chahiye.
+
+try { }
+finally { }
+
+✅ Q14. What is the use of super keyword?
+
+Answer:
+super keyword:
+
+Parent class variables access
+
+Parent class method call
+
+Parent constructor call
+
+✅ Q15. What does the final keyword mean?
+
+Answer:
+
+Use	Meaning
+final variable	Value change nahi hogi
+final method	Override nahi ho sakta
+final class	Inherit nahi ho sakta
+✅ Q16. How are exceptions handled in Java?
+
+Answer:
+Java me exceptions handle karte hain:
+
+try
+
+catch
+
+finally
+
+throw
+
+throws
+
+✅ Q17. How to prevent object serialization in Java?
+
+Answer:
+1️⃣ Variable ko transient bana do
+2️⃣ Class ko serialize hi na karo
+
+transient int password;
+
+✅ Q18. Constructor vs Method in Java?
+Constructor	Method
+Object initialize karta hai	Logic perform karta hai
+Class name same hota hai	Any name
+Return type nahi hota	Return type hota hai
+✅ Q19. Why is reflection used in Java?
+
+Answer:
+Reflection ka use:
+
+Runtime par class, method, field access
+
+Frameworks (Spring, Hibernate) me use hota hai
+
+✅ Q20. Types of ClassLoaders?
+
+Answer:
+
+Bootstrap ClassLoader
+
+Extension ClassLoader
+
+Application ClassLoader
+
+✅ Q21. What is a copy constructor in Java?
+
+Answer:
+Java me official copy constructor nahi hota,
+but hum manually bana sakte hain.
+
+👉 Object ke data ko dusre object me copy karta hai.
+
+✅ Q22. What is object cloning?
+
+Answer:
+Object ki exact copy banana cloning kehlata hai.
+
+👉 Cloneable interface use hota hai.
+
+✅ Q23. Is Java purely object-oriented?
+
+Answer:
+❌ Nahi
+Kyuki Java me primitive data types hote hain.
+
+✅ Q24. What is a package?
+
+Answer:
+Package = related classes ka group
+
+Benefits:
+
+Code organization
+
+Security
+
+Reusability
+
+✅ Q25. What is coercion?
+
+Answer:
+Coercion = automatic type conversion
+
+👉 Example:
+
+int a = 10;
+double b = a; // int → double
