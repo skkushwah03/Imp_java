@@ -1,0 +1,254 @@
+1️⃣ Check if a number is Prime
+import java.util.Scanner;
+
+class PrimeCheck {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        boolean isPrime = true;
+
+        if (n <= 1) isPrime = false;
+
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+
+        System.out.println(isPrime ? "Prime" : "Not Prime");
+    }
+}
+
+2️⃣ Bubble Sort an Array
+class BubbleSort {
+    public static void main(String[] args) {
+        int[] arr = {5, 2, 8, 1, 3};
+
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 0; j < arr.length - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+
+        for (int x : arr)
+            System.out.print(x + " ");
+    }
+}
+
+3️⃣ Reverse a String
+class ReverseString {
+    public static void main(String[] args) {
+        String str = "Java";
+        String rev = "";
+
+        for (int i = str.length() - 1; i >= 0; i--)
+            rev += str.charAt(i);
+
+        System.out.println(rev);
+    }
+}
+
+4️⃣ Check if One String is Rotation of Another
+class StringRotation {
+    public static void main(String[] args) {
+        String s1 = "ABCD";
+        String s2 = "CDAB";
+
+        boolean result = (s1.length() == s2.length()) &&
+                         ((s1 + s1).contains(s2));
+
+        System.out.println(result);
+    }
+}
+
+5️⃣ Balanced Parentheses
+import java.util.Stack;
+
+class BalancedParentheses {
+    public static void main(String[] args) {
+        String exp = "{[()]}";
+        Stack<Character> stack = new Stack<>();
+        boolean balanced = true;
+
+        for (char ch : exp.toCharArray()) {
+            if (ch == '(' || ch == '{' || ch == '[')
+                stack.push(ch);
+            else {
+                if (stack.isEmpty()) { balanced = false; break; }
+                char top = stack.pop();
+                if ((ch == ')' && top != '(') ||
+                    (ch == '}' && top != '{') ||
+                    (ch == ']' && top != '[')) {
+                    balanced = false;
+                    break;
+                }
+            }
+        }
+
+        if (!stack.isEmpty()) balanced = false;
+        System.out.println(balanced);
+    }
+}
+
+6️⃣ Largest Number in an Array
+class LargestInArray {
+    public static void main(String[] args) {
+        int[] arr = {10, 25, 5, 40};
+        int max = arr[0];
+
+        for (int i = 1; i < arr.length; i++)
+            if (arr[i] > max)
+                max = arr[i];
+
+        System.out.println(max);
+    }
+}
+
+7️⃣ Fibonacci Series up to n Terms
+import java.util.Scanner;
+
+class Fibonacci {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int a = 0, b = 1;
+
+        for (int i = 1; i <= n; i++) {
+            System.out.print(a + " ");
+            int c = a + b;
+            a = b;
+            b = c;
+        }
+    }
+}
+
+8️⃣ Sum of Digits of a Number
+class SumOfDigits {
+    public static void main(String[] args) {
+        int n = 1234, sum = 0;
+
+        while (n > 0) {
+            sum += n % 10;
+            n /= 10;
+        }
+
+        System.out.println(sum);
+    }
+}
+
+9️⃣ Print All Prime Numbers up to n
+class PrimeUptoN {
+    public static void main(String[] args) {
+        int n = 50;
+
+        for (int i = 2; i <= n; i++) {
+            boolean prime = true;
+            for (int j = 2; j <= Math.sqrt(i); j++) {
+                if (i % j == 0) {
+                    prime = false;
+                    break;
+                }
+            }
+            if (prime)
+                System.out.print(i + " ");
+        }
+    }
+}
+
+🔟 Longest Substring Without Repeating Characters
+import java.util.HashSet;
+
+class LongestSubstring {
+    public static void main(String[] args) {
+        String s = "abcabcbb";
+        HashSet<Character> set = new HashSet<>();
+        int left = 0, max = 0;
+
+        for (int right = 0; right < s.length(); right++) {
+            while (set.contains(s.charAt(right))) {
+                set.remove(s.charAt(left));
+                left++;
+            }
+            set.add(s.charAt(right));
+            max = Math.max(max, right - left + 1);
+        }
+
+        System.out.println(max);
+    }
+}
+
+1️⃣1️⃣ Count Vowels in a String
+class CountVowels {
+    public static void main(String[] args) {
+        String s = "education";
+        int count = 0;
+
+        for (char ch : s.toCharArray()) {
+            if ("aeiouAEIOU".indexOf(ch) != -1)
+                count++;
+        }
+
+        System.out.println(count);
+    }
+}
+
+1️⃣2️⃣ Simple Banking System
+class Bank {
+    int balance = 0;
+
+    void deposit(int amount) {
+        balance += amount;
+    }
+
+    void withdraw(int amount) {
+        if (amount <= balance)
+            balance -= amount;
+        else
+            System.out.println("Insufficient Balance");
+    }
+
+    public static void main(String[] args) {
+        Bank b = new Bank();
+        b.deposit(1000);
+        b.withdraw(500);
+        System.out.println(b.balance);
+    }
+}
+
+1️⃣3️⃣ Bubble Sort (Again – Interview Favorite)
+class BubbleSortAgain {
+    public static void main(String[] args) {
+        int[] arr = {4, 3, 2, 1};
+
+        for (int i = 0; i < arr.length; i++)
+            for (int j = 0; j < arr.length - 1 - i; j++)
+                if (arr[j] > arr[j + 1]) {
+                    int t = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = t;
+                }
+
+        for (int x : arr)
+            System.out.print(x + " ");
+    }
+}
+
+1️⃣4️⃣ Count Occurrences of Each Character
+import java.util.HashMap;
+
+class CharCount {
+    public static void main(String[] args) {
+        String s = "programming";
+        HashMap<Character, Integer> map = new HashMap<>();
+
+        for (char ch : s.toCharArray())
+            map.put(ch, map.getOrDefault(ch, 0) + 1);
+
+        System.out.println(map);
+    }
+}
