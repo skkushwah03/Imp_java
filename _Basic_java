@@ -1,0 +1,552 @@
+🔹 OOP CONCEPTS (1–20)
+1. What is OOP?
+
+Answer:
+OOP (Object-Oriented Programming) is a programming style based on objects and classes that helps in code reusability, security, and modularity.
+
+2. What are the four pillars of OOP?
+
+Answer:
+
+Encapsulation
+
+Inheritance
+
+Polymorphism
+
+Abstraction
+
+3. What is Encapsulation?
+
+Answer:
+Wrapping data (variables) and methods into a single unit (class) and hiding data using private access modifier.
+
+4. How do you achieve Encapsulation in Java?
+
+Answer:
+
+Declare variables as private
+
+Provide public getter and setter methods
+
+5. What is Inheritance?
+
+Answer:
+One class acquires properties of another class using extends keyword.
+
+6. Why inheritance is used?
+
+Answer:
+For code reuse, method overriding, and hierarchical relationship.
+
+7. Types of inheritance supported in Java?
+
+Answer:
+
+Single
+
+Multilevel
+
+Hierarchical
+(Java does NOT support multiple inheritance with classes)
+
+8. Why Java does not support multiple inheritance?
+
+Answer:
+Because of Diamond Problem ambiguity.
+
+9. What is Polymorphism?
+
+Answer:
+One method behaving differently in different situations.
+
+10. Types of Polymorphism?
+
+Answer:
+
+Compile-time (Method Overloading)
+
+Runtime (Method Overriding)
+
+11. What is method overloading?
+
+Answer:
+Same method name but different parameters in same class.
+
+12. Can we overload main method?
+
+Answer:
+✅ Yes, but JVM calls only public static void main(String[] args).
+
+13. What is method overriding?
+
+Answer:
+Child class provides its own implementation of parent class method.
+
+14. Rules for method overriding?
+
+Answer:
+
+Same method name
+
+Same parameters
+
+IS-A relationship
+
+Cannot reduce access level
+
+15. What is Abstraction?
+
+Answer:
+Hiding implementation details and showing only functionality.
+
+16. How to achieve abstraction in Java?
+
+Answer:
+
+Abstract class
+
+Interface
+
+17. Difference between abstract class and interface?
+
+Answer:
+Abstract class can have constructors & variables, interface cannot.
+
+18. Can abstract class have constructor?
+
+Answer:
+✅ Yes
+
+19. Can we create object of abstract class?
+
+Answer:
+❌ No
+
+20. What is interface?
+
+Answer:
+A blueprint of a class containing abstract methods (Java 8 allows default & static methods).
+
+🔹 JAVA BASICS (21–40)
+21. What is JVM?
+
+Answer:
+Java Virtual Machine executes bytecode and makes Java platform independent.
+
+22. What is JDK?
+
+Answer:
+Java Development Kit = JRE + development tools.
+
+23. What is JRE?
+
+Answer:
+Java Runtime Environment provides runtime libraries.
+
+24. Why Java is platform independent?
+
+Answer:
+Because of bytecode + JVM.
+
+25. Is Java 100% object-oriented?
+
+Answer:
+❌ No (because of primitive data types)
+
+26. What are data types in Java?
+
+Answer:
+
+Primitive
+
+Non-Primitive
+
+27. List primitive data types.
+
+Answer:
+byte, short, int, long, float, double, char, boolean
+
+28. Size of int?
+
+Answer:
+4 bytes
+
+29. Default value of boolean?
+
+Answer:
+false
+
+30. What are variables?
+
+Answer:
+Containers to store data.
+
+31. Types of variables?
+
+Answer:
+
+Local
+
+Instance
+
+Static
+
+32. What is static variable?
+
+Answer:
+Shared among all objects of class.
+
+33. Control statements in Java?
+
+Answer:
+
+if, if-else
+
+switch
+
+loops (for, while, do-while)
+
+34. Difference between while and do-while?
+
+Answer:
+do-while runs at least once.
+
+35. What is break?
+
+Answer:
+Terminates loop or switch.
+
+36. What is continue?
+
+Answer:
+Skips current iteration.
+
+37. What is switch?
+
+Answer:
+Multi-branch decision statement.
+
+38. Can switch work with String?
+
+Answer:
+✅ Yes (Java 7+)
+
+39. What is method?
+
+Answer:
+A block of code performing a task.
+
+40. Why methods are used?
+
+Answer:
+Code reusability & readability.
+
+🔹 STRING HANDLING (41–60)
+41. What is String in Java?
+
+Answer:
+String is a non-primitive immutable class.
+
+42. Why String is immutable?
+
+Answer:
+For security, thread safety, and caching.
+
+43. Difference between String and StringBuilder?
+
+Answer:
+String is immutable, StringBuilder is mutable.
+
+44. Difference between StringBuilder and StringBuffer?
+
+Answer:
+StringBuffer is thread-safe, StringBuilder is not.
+
+45. Which is faster?
+
+Answer:
+StringBuilder
+
+46. What is String pool?
+
+Answer:
+Memory area inside heap to store String literals.
+
+47. How many objects created?
+String s = "Java";
+String s2 = "Java";
+
+
+Answer:
+1 object
+
+48. How many objects created?
+String s = new String("Java");
+
+
+Answer:
+2 objects
+
+49. Can we compare String using ==?
+
+Answer:
+Yes, but it compares reference not content.
+
+50. Correct way to compare String?
+
+Answer:
+equals()
+
+51. What does equals() do?
+
+Answer:
+Compares content.
+
+52. What is concat()?
+
+Answer:
+Joins strings.
+
+53. What is length()?
+
+Answer:
+Returns length of string.
+
+54. What is charAt()?
+
+Answer:
+Returns character at index.
+
+55. Can String be inherited?
+
+Answer:
+❌ No (final class)
+
+56. What is substring()?
+
+Answer:
+Extracts part of string.
+
+57. Is String thread-safe?
+
+Answer:
+✅ Yes
+
+58. Why StringBuffer is thread-safe?
+
+Answer:
+Because its methods are synchronized.
+
+59. Can StringBuilder be synchronized?
+
+Answer:
+❌ No
+
+60. Where String objects are stored?
+
+Answer:
+Heap & String Constant Pool.
+
+🔹 EXCEPTION HANDLING (61–80)
+61. What is exception?
+
+Answer:
+Runtime error that disrupts normal program flow.
+
+62. Types of exceptions?
+
+Answer:
+
+Checked
+
+Unchecked
+
+63. What is checked exception?
+
+Answer:
+Checked at compile time (IOException).
+
+64. What is unchecked exception?
+
+Answer:
+Occurs at runtime (NullPointerException).
+
+65. What is try-catch?
+
+Answer:
+Handles exceptions.
+
+66. Can try exist without catch?
+
+Answer:
+✅ Yes (with finally)
+
+67. Can finally exist without catch?
+
+Answer:
+✅ Yes
+
+68. Does finally always execute?
+
+Answer:
+✅ Yes (except System.exit)
+
+69. What is throw?
+
+Answer:
+Used to explicitly throw exception.
+
+70. What is throws?
+
+Answer:
+Declares exception.
+
+71. Difference between throw and throws?
+
+Answer:
+throw → throws exception
+throws → declares exception
+
+72. Can we catch multiple exceptions?
+
+Answer:
+✅ Yes (multi-catch)
+
+73. What is custom exception?
+
+Answer:
+User-defined exception.
+
+74. Parent of all exceptions?
+
+Answer:
+Throwable
+
+75. Difference between Error and Exception?
+
+Answer:
+Error is unrecoverable, Exception is recoverable.
+
+76. What is NullPointerException?
+
+Answer:
+Accessing object with null reference.
+
+77. What is ArithmeticException?
+
+Answer:
+Division by zero.
+
+78. Can we override exception?
+
+Answer:
+Child cannot throw broader exception.
+
+79. Is exception mandatory?
+
+Answer:
+Checked → Yes
+Unchecked → No
+
+80. Can main throw exception?
+
+Answer:
+✅ Yes
+
+🔹 WRAPPER CLASSES & AUTOBOXING (81–100)
+81. What is wrapper class?
+
+Answer:
+Converts primitive to object.
+
+82. Name wrapper classes.
+
+Answer:
+Integer, Float, Double, Character, Boolean
+
+83. Why wrapper classes?
+
+Answer:
+Collections need objects.
+
+84. What is autoboxing?
+
+Answer:
+Primitive → Object automatically.
+
+85. What is unboxing?
+
+Answer:
+Object → Primitive.
+
+86. Example of autoboxing?
+Integer i = 10;
+
+87. Example of unboxing?
+int a = i;
+
+88. Is Integer immutable?
+
+Answer:
+✅ Yes
+
+89. Can wrapper class be null?
+
+Answer:
+✅ Yes
+
+90. Can primitive be null?
+
+Answer:
+❌ No
+
+91. Difference between int and Integer?
+
+Answer:
+int is primitive, Integer is object.
+
+92. What is valueOf()?
+
+Answer:
+Converts String to wrapper.
+
+93. What is parseInt()?
+
+Answer:
+Converts String to primitive int.
+
+94. Can we compare wrapper using ==?
+
+Answer:
+❌ Not reliable
+
+95. Best way to compare wrapper?
+
+Answer:
+equals()
+
+96. What is caching in Integer?
+
+Answer:
+Values -128 to 127 are cached.
+
+97. Why wrapper classes are final?
+
+Answer:
+Security & immutability.
+
+98. Can wrapper classes be extended?
+
+Answer:
+❌ No
+
+99. Are wrapper classes thread-safe?
+
+Answer:
+✅ Yes (immutable)
+
+100. Most asked Java interview topic?
+
+Answer:
+OOP + Exception + String 🔥
