@@ -1,0 +1,345 @@
+📦 COLLECTIONS FRAMEWORK (Q1–Q40)
+🔹 Core Collections
+
+1. What is Java Collections Framework?
+A unified architecture to store, manipulate, and retrieve data efficiently using classes like List, Set, Map.
+
+2. Difference between Collection and Collections?
+
+Collection → Interface
+
+Collections → Utility class (sorting, searching, etc.)
+
+3. Why collections over arrays?
+Dynamic size, ready-made methods, better performance, flexibility.
+
+4. Main interfaces in Collections Framework?
+List, Set, Queue, Map
+
+5. Collection hierarchy?
+Collection → List / Set / Queue
+Map is separate.
+
+6. List vs Set vs Map?
+
+List → duplicates allowed
+
+Set → no duplicates
+
+Map → key-value pairs
+
+7. Can collections store null?
+Yes, depends on implementation.
+
+8. Are collections thread-safe?
+No, by default they are not thread-safe.
+
+9. Fail-fast vs Fail-safe?
+
+Fail-fast → throws ConcurrentModificationException
+
+Fail-safe → works on copy (ConcurrentHashMap)
+
+10. Iterator vs ListIterator?
+ListIterator can traverse both directions, Iterator cannot.
+
+🔹 List (ArrayList & LinkedList)
+
+11. ArrayList vs LinkedList?
+ArrayList → fast search
+LinkedList → fast insertion/deletion
+
+12. Which is better for insertion?
+LinkedList
+
+13. Internal working of ArrayList?
+Uses dynamic array, resizes by 1.5x.
+
+14. Why ArrayList faster in search?
+Direct index access.
+
+15. Can ArrayList store duplicates?
+Yes.
+
+16. Is ArrayList synchronized?
+No.
+
+17. Make ArrayList thread-safe?
+Collections.synchronizedList().
+
+18. When to use LinkedList?
+When frequent insert/delete needed.
+
+🔹 Set (HashSet & TreeSet)
+
+19. List vs Set?
+Set does not allow duplicates.
+
+20. What is HashSet?
+Unordered, uses HashMap internally.
+
+21. How HashSet avoids duplicates?
+Uses hashCode() and equals().
+
+22. Can HashSet store null?
+Yes, only one null.
+
+23. HashSet vs TreeSet?
+TreeSet is sorted, HashSet is not.
+
+24. Does TreeSet allow null?
+No (NullPointerException).
+
+25. Why TreeSet slower?
+Uses Red-Black Tree.
+
+26. How TreeSet maintains order?
+Natural ordering or Comparator.
+
+🔹 Map
+
+27. Map vs Collection?
+Map stores key-value pairs.
+
+28. What is HashMap?
+Unordered map using hashing.
+
+29. Internal working of HashMap?
+Array + LinkedList/Red-Black Tree.
+
+30. Can HashMap have null?
+1 null key, multiple null values.
+
+31. HashMap vs Hashtable?
+Hashtable is synchronized, HashMap is not.
+
+32. HashMap vs TreeMap?
+TreeMap is sorted.
+
+33. What is ConcurrentHashMap?
+Thread-safe Map without locking whole map.
+
+34. Why ConcurrentHashMap faster?
+Segment-level locking.
+
+35. Is HashMap thread-safe?
+No.
+
+36. Load factor?
+Default = 0.75 (resize threshold).
+
+37. When HashMap full?
+Rehashing happens.
+
+38. Why key immutable?
+Prevents data loss during hashing.
+
+39. equals() vs hashCode()?
+equals checks equality, hashCode decides bucket.
+
+40. What is collision?
+Two keys having same hash.
+
+🔁 COMPARABLE vs COMPARATOR (Q41–Q45)
+
+41. Comparable?
+Used for natural ordering (compareTo()).
+
+42. Comparator?
+Used for custom ordering.
+
+43. Comparable vs Comparator?
+Comparable → single logic
+Comparator → multiple logics
+
+44. Sort without Comparable?
+Yes, using Comparator.
+
+45. Which supports multiple sorting?
+Comparator
+
+🧵 MULTITHREADING (Q46–Q65)
+
+46. What is thread?
+Smallest unit of execution.
+
+47. Process vs Thread?
+Thread shares memory, process doesn’t.
+
+48. Create thread?
+
+Extend Thread
+
+Implement Runnable
+
+49. Runnable vs Thread?
+Runnable is better (supports multiple inheritance).
+
+50. What is multithreading?
+Executing multiple threads simultaneously.
+
+51. Advantages?
+Performance, resource sharing.
+
+52. Start thread twice?
+No (IllegalThreadStateException).
+
+🔹 Thread Lifecycle & Sync
+
+53. Thread lifecycle?
+New → Runnable → Running → Blocked → Dead → Terminated
+
+54. Synchronization?
+Controls access to shared resources.
+
+55. Why synchronization?
+Avoid data inconsistency.
+
+56. Synchronized method/block?
+Locks object/class.
+
+57. Object-level lock?
+Locks specific object.
+
+58. Class-level lock?
+Locks entire class.
+
+59. volatile keyword?
+Ensures visibility across threads.
+
+60. wait() vs sleep()?
+wait releases lock, sleep doesn’t.
+
+🔹 Deadlock & ExecutorService
+
+61. Deadlock?
+Threads waiting forever for each other.
+
+62. Prevent deadlock?
+Avoid nested locks.
+
+63. Starvation?
+Thread never gets CPU time.
+
+64. ExecutorService?
+Manages thread pool.
+
+65. submit() vs execute()?
+submit returns Future, execute doesn’t.
+
+🧠 JVM INTERNALS (Q66–Q80)
+
+66. JVM?
+Runs Java bytecode.
+
+67. JDK vs JRE vs JVM?
+JDK = JRE + tools
+JRE = JVM + libraries
+
+68. JVM platform dependent?
+Yes.
+
+69. JVM components?
+Class Loader, Memory, Execution Engine.
+
+70. Class loader?
+Loads .class files.
+
+🔹 Memory
+
+71. Heap?
+Stores objects.
+
+72. Stack?
+Stores method calls & local variables.
+
+73. Heap vs Stack?
+Heap = dynamic, Stack = static.
+
+74. Objects stored where?
+Heap.
+
+75. Methods stored where?
+Method Area.
+
+🔹 Garbage Collection
+
+76. GC?
+Deletes unused objects.
+
+77. How GC works?
+Marks & removes unreachable objects.
+
+78. Force GC?
+No guarantee (System.gc()).
+
+79. finalize()?
+Called before GC (deprecated).
+
+80. GC types?
+Serial, Parallel, CMS, G1.
+
+📁 FILE HANDLING & I/O (Q81–Q90)
+
+81. File handling?
+Reading/writing files.
+
+82. File vs FileInputStream?
+File → file info
+Stream → data reading
+
+83. Byte stream?
+Handles binary data.
+
+84. Character stream?
+Handles text data.
+
+85. InputStream vs Reader?
+Binary vs text.
+
+86. BufferedReader?
+Fast text reading.
+
+87. Scanner?
+Reads input easily.
+
+88. Read file?
+FileReader + BufferedReader.
+
+89. Write file?
+FileWriter / BufferedWriter.
+
+90. try-with-resources?
+Auto closes resources.
+
+🔐 SERIALIZATION (Q91–Q100)
+
+91. Serialization?
+Object → byte stream.
+
+92. Deserialization?
+Byte stream → object.
+
+93. Why serialization?
+Save or transfer object state.
+
+94. Serializable interface?
+Marker interface.
+
+95. transient keyword?
+Prevents serialization.
+
+96. Not Serializable class?
+NotSerializableException.
+
+97. Static variables serialized?
+No.
+
+98. serialVersionUID?
+Version control.
+
+99. Externalizable vs Serializable?
+Externalizable gives full control.
+
+100. Real use?
+Caching, session management.
