@@ -1,0 +1,572 @@
+🔥 SQL, DBMS, Transactions & ACID – Top 100 Questions with Answers
+🔹 SQL Basics
+1. What is SQL?
+
+Answer:
+SQL (Structured Query Language) is used to store, retrieve, manipulate data in relational databases.
+
+2. Types of SQL commands?
+
+Answer:
+
+DDL – CREATE, ALTER, DROP
+
+DML – INSERT, UPDATE, DELETE
+
+DQL – SELECT
+
+DCL – GRANT, REVOKE
+
+TCL – COMMIT, ROLLBACK, SAVEPOINT
+
+3. What is a table?
+
+Answer:
+A table is a collection of rows (records) and columns (attributes).
+
+4. What is a primary key?
+
+Answer:
+A column that uniquely identifies each row and cannot be NULL.
+
+5. What is a foreign key?
+
+Answer:
+A column that creates a relationship between two tables.
+
+6. Difference between DELETE and TRUNCATE?
+DELETE	TRUNCATE
+Row by row	Deletes all rows
+Can rollback	Cannot rollback
+Where clause allowed	No where
+7. What is NULL?
+
+Answer:
+NULL means unknown or no value, not zero.
+
+8. What is DISTINCT?
+
+Answer:
+Removes duplicate values.
+
+9. What is WHERE clause?
+
+Answer:
+Filters records.
+
+10. What is ORDER BY?
+
+Answer:
+Sorts result set (ASC / DESC).
+
+🔹 Joins
+11. What is JOIN?
+
+Answer:
+JOIN is used to combine rows from multiple tables based on related columns.
+
+12. Types of JOIN?
+
+Answer:
+
+INNER JOIN
+
+LEFT JOIN
+
+RIGHT JOIN
+
+FULL JOIN
+
+SELF JOIN
+
+CROSS JOIN
+
+13. INNER JOIN?
+
+Answer:
+Returns only matching records.
+
+14. LEFT JOIN?
+
+Answer:
+Returns all rows from left table + matched rows from right.
+
+15. RIGHT JOIN?
+
+Answer:
+Returns all rows from right table + matched rows from left.
+
+16. FULL JOIN?
+
+Answer:
+Returns all records from both tables.
+
+17. SELF JOIN?
+
+Answer:
+Joining a table with itself.
+
+18. CROSS JOIN?
+
+Answer:
+Returns Cartesian product.
+
+19. Join vs Subquery?
+
+Answer:
+JOIN is usually faster and more readable.
+
+20. Can we join more than two tables?
+
+Answer:
+Yes ✅
+
+🔹 Subqueries
+21. What is a subquery?
+
+Answer:
+Query inside another query.
+
+22. Types of subqueries?
+
+Answer:
+
+Single-row
+
+Multi-row
+
+Correlated
+
+Nested
+
+23. Correlated subquery?
+
+Answer:
+Subquery that depends on outer query.
+
+24. Subquery vs JOIN?
+
+Answer:
+JOIN performs better for large datasets.
+
+25. Can subquery be used in SELECT?
+
+Answer:
+Yes.
+
+26. IN vs EXISTS?
+
+Answer:
+EXISTS is faster for large data.
+
+27. Can subquery return multiple columns?
+
+Answer:
+Yes, in FROM clause.
+
+28. What is scalar subquery?
+
+Answer:
+Returns a single value.
+
+29. Can subquery be nested?
+
+Answer:
+Yes.
+
+30. Which is faster: JOIN or Subquery?
+
+Answer:
+JOIN (generally).
+
+🔹 Indexing
+31. What is an index?
+
+Answer:
+Index improves search performance.
+
+32. Why indexing is used?
+
+Answer:
+Faster SELECT queries.
+
+33. Types of indexes?
+
+Answer:
+
+Primary index
+
+Unique index
+
+Composite index
+
+Clustered
+
+Non-clustered
+
+34. Clustered index?
+
+Answer:
+Data stored in sorted order (only one).
+
+35. Non-clustered index?
+
+Answer:
+Separate structure pointing to data.
+
+36. Does index improve INSERT?
+
+Answer:
+No ❌ (slows INSERT/UPDATE).
+
+37. Index on primary key?
+
+Answer:
+Automatically created.
+
+38. Index on foreign key?
+
+Answer:
+Recommended.
+
+39. Disadvantage of index?
+
+Answer:
+Extra storage + slower writes.
+
+40. Can we have multiple indexes?
+
+Answer:
+Yes.
+
+🔹 DBMS Concepts
+41. What is DBMS?
+
+Answer:
+Database Management System manages data efficiently.
+
+42. DBMS vs RDBMS?
+
+Answer:
+RDBMS supports relations + constraints.
+
+43. What is schema?
+
+Answer:
+Logical structure of database.
+
+44. What is instance?
+
+Answer:
+Current state of database.
+
+45. What is constraint?
+
+Answer:
+Rules on data.
+
+46. Types of constraints?
+
+Answer:
+
+NOT NULL
+
+UNIQUE
+
+PRIMARY KEY
+
+FOREIGN KEY
+
+CHECK
+
+47. What is view?
+
+Answer:
+Virtual table.
+
+48. What is materialized view?
+
+Answer:
+Physically stored view.
+
+49. What is data integrity?
+
+Answer:
+Accuracy and consistency of data.
+
+50. What is redundancy?
+
+Answer:
+Duplicate data.
+
+🔹 Normalization (1NF → 3NF)
+51. What is normalization?
+
+Answer:
+Process of reducing redundancy.
+
+52. 1NF?
+
+Answer:
+Atomic values, no repeating groups.
+
+53. 2NF?
+
+Answer:
+1NF + no partial dependency.
+
+54. Partial dependency?
+
+Answer:
+Depends on part of composite key.
+
+55. 3NF?
+
+Answer:
+2NF + no transitive dependency.
+
+56. Transitive dependency?
+
+Answer:
+Non-key depends on another non-key.
+
+57. Why normalization?
+
+Answer:
+Better consistency and storage.
+
+58. Disadvantage of normalization?
+
+Answer:
+More joins, slower queries.
+
+59. Denormalization?
+
+Answer:
+Adding redundancy for performance.
+
+60. Is normalization always good?
+
+Answer:
+No, depends on use case.
+
+🔹 Transactions
+61. What is a transaction?
+
+Answer:
+A set of SQL operations executed as a single unit.
+
+62. Transaction states?
+
+Answer:
+
+Active
+
+Committed
+
+Rolled back
+
+Failed
+
+63. What is COMMIT?
+
+Answer:
+Permanently saves changes.
+
+64. What is ROLLBACK?
+
+Answer:
+Undo changes.
+
+65. What is SAVEPOINT?
+
+Answer:
+Partial rollback.
+
+66. Can DDL be rolled back?
+
+Answer:
+No ❌
+
+67. Implicit commit?
+
+Answer:
+DDL causes auto commit.
+
+68. What is auto-commit?
+
+Answer:
+Each statement is committed automatically.
+
+69. Can transactions be nested?
+
+Answer:
+Using savepoints.
+
+70. Why transactions?
+
+Answer:
+Data consistency.
+
+🔹 ACID Properties
+71. What is ACID?
+
+Answer:
+Atomicity, Consistency, Isolation, Durability.
+
+72. Atomicity?
+
+Answer:
+All or nothing execution.
+
+73. Consistency?
+
+Answer:
+Database remains valid.
+
+74. Isolation?
+
+Answer:
+Transactions don’t interfere.
+
+75. Durability?
+
+Answer:
+Committed data is permanent.
+
+76. Isolation levels?
+
+Answer:
+
+Read Uncommitted
+
+Read Committed
+
+Repeatable Read
+
+Serializable
+
+77. Dirty read?
+
+Answer:
+Reading uncommitted data.
+
+78. Non-repeatable read?
+
+Answer:
+Data changes between reads.
+
+79. Phantom read?
+
+Answer:
+New rows appear in same query.
+
+80. Highest isolation level?
+
+Answer:
+Serializable.
+
+🔹 Advanced & Interview
+81. What is deadlock?
+
+Answer:
+Two transactions waiting forever.
+
+82. How to prevent deadlock?
+
+Answer:
+Proper locking, timeout.
+
+83. What is locking?
+
+Answer:
+Restrict data access.
+
+84. Types of locks?
+
+Answer:
+
+Shared
+
+Exclusive
+
+85. What is optimistic locking?
+
+Answer:
+Uses version check.
+
+86. What is pessimistic locking?
+
+Answer:
+Locks row early.
+
+87. What is query optimization?
+
+Answer:
+Improving query performance.
+
+88. Explain execution plan?
+
+Answer:
+Shows how query executes.
+
+89. What is cardinality?
+
+Answer:
+Uniqueness of data.
+
+90. What is selectivity?
+
+Answer:
+Effectiveness of index.
+
+91. What is composite key?
+
+Answer:
+Multiple columns as primary key.
+
+92. Can primary key be null?
+
+Answer:
+No ❌
+
+93. Can foreign key be null?
+
+Answer:
+Yes ✅
+
+94. Difference between UNION and UNION ALL?
+
+Answer:
+UNION removes duplicates.
+
+95. What is EXISTS?
+
+Answer:
+Checks existence of rows.
+
+96. What is HAVING?
+
+Answer:
+Filters groups.
+
+97. Difference between WHERE and HAVING?
+
+Answer:
+WHERE → rows
+HAVING → groups
+
+98. What is COUNT(*)?
+
+Answer:
+Counts rows.
+
+99. What is database index used for?
+
+Answer:
+Fast search.
+
+100. Why DBMS over file system?
+
+Answer:
+Security, integrity, concurrency, recovery.
