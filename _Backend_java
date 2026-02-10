@@ -1,0 +1,636 @@
+🔹 JDBC (Java Database Connectivity)
+1. What is JDBC?
+
+Answer:
+JDBC is a Java API used to connect Java applications with databases and execute SQL queries.
+It acts as a bridge between Java program and database.
+
+2. What are the main JDBC components?
+
+Answer:
+
+DriverManager
+
+Driver
+
+Connection
+
+Statement / PreparedStatement / CallableStatement
+
+ResultSet
+
+3. What is a JDBC Driver?
+
+Answer:
+A JDBC driver is a software component that enables Java application to interact with database.
+
+Types:
+
+Type 1 – JDBC-ODBC Bridge
+
+Type 2 – Native API
+
+Type 3 – Network Protocol
+
+Type 4 – Thin Driver ✅ (most used)
+
+4. What is Connection?
+
+Answer:
+Connection represents a session between Java application and database.
+
+Connection con = DriverManager.getConnection(url, user, pass);
+
+5. Difference between Statement and PreparedStatement?
+Statement	PreparedStatement
+SQL compile every time	SQL compiled once
+Less secure	Prevents SQL Injection
+Slower	Faster
+6. What is SQL Injection?
+
+Answer:
+SQL Injection is a security vulnerability where attacker inserts malicious SQL code.
+PreparedStatement prevents it.
+
+7. What is ResultSet?
+
+Answer:
+ResultSet holds the data returned from SELECT query.
+
+while(rs.next()){
+  rs.getInt("id");
+}
+
+8. Difference between executeQuery() and executeUpdate()?
+
+Answer:
+
+executeQuery() → SELECT
+
+executeUpdate() → INSERT, UPDATE, DELETE
+
+9. What is batch processing in JDBC?
+
+Answer:
+Executing multiple SQL statements at once using addBatch() and executeBatch().
+
+10. What is AutoCommit?
+
+Answer:
+If autoCommit is true, each SQL statement is committed automatically.
+
+con.setAutoCommit(false);
+
+🔹 Spring Framework
+11. What is Spring Framework?
+
+Answer:
+Spring Framework is a lightweight framework for building Java applications, mainly focused on Dependency Injection and Aspect-Oriented Programming.
+
+12. What is Dependency Injection (DI)?
+
+Answer:
+DI means object dependency is injected by framework, not created manually.
+
+13. Types of Dependency Injection?
+
+Answer:
+
+Constructor Injection ✅
+
+Setter Injection
+
+Field Injection
+
+14. What is IoC Container?
+
+Answer:
+Inversion of Control container manages object creation and lifecycle.
+
+Examples:
+
+BeanFactory
+
+ApplicationContext
+
+15. What is a Spring Bean?
+
+Answer:
+A Java object managed by Spring container is called a Bean.
+
+16. Difference between BeanFactory and ApplicationContext?
+BeanFactory	ApplicationContext
+Lazy loading	Eager loading
+Lightweight	Enterprise ready
+17. What are Spring Bean scopes?
+
+Answer:
+
+Singleton (default)
+
+Prototype
+
+Request
+
+Session
+
+Application
+
+18. What is @Component?
+
+Answer:
+Marks a class as Spring-managed bean.
+
+19. Difference between @Component, @Service, @Repository?
+
+Answer:
+
+@Component → Generic
+
+@Service → Business logic
+
+@Repository → DAO + Exception translation
+
+20. What is @Autowired?
+
+Answer:
+Automatically injects dependency.
+
+🔹 Spring MVC
+21. What is Spring MVC?
+
+Answer:
+Spring MVC is a web framework based on Model-View-Controller architecture.
+
+22. What is DispatcherServlet?
+
+Answer:
+Central controller that handles all requests in Spring MVC.
+
+23. What is @Controller?
+
+Answer:
+Used to define a controller class.
+
+24. Difference between @Controller and @RestController?
+
+Answer:
+
+@Controller → Returns View
+
+@RestController → Returns JSON / XML ✅
+
+25. What is @RequestMapping?
+
+Answer:
+Maps HTTP requests to controller methods.
+
+26. Difference between @GetMapping and @PostMapping?
+
+Answer:
+
+GET → Fetch data
+
+POST → Create data
+
+27. What is Model?
+
+Answer:
+Model carries data from controller to view.
+
+28. What is @PathVariable?
+
+Answer:
+Extracts values from URL.
+
+29. What is @RequestParam?
+
+Answer:
+Extracts query parameter.
+
+30. What is @RequestBody?
+
+Answer:
+Converts JSON to Java object.
+
+🔹 Spring Boot
+31. What is Spring Boot?
+
+Answer:
+Spring Boot simplifies Spring application setup with auto-configuration.
+
+32. Advantages of Spring Boot?
+
+Answer:
+
+No XML config
+
+Embedded server
+
+Auto-configuration
+
+Production ready
+
+33. What is @SpringBootApplication?
+
+Answer:
+Combination of:
+
+@Configuration
+
+@EnableAutoConfiguration
+
+@ComponentScan
+
+34. What is Embedded Server?
+
+Answer:
+Tomcat/Jetty embedded inside application.
+
+35. What is application.properties?
+
+Answer:
+Used to configure database, port, logging etc.
+
+36. Difference between application.properties and application.yml?
+
+Answer:
+YML is hierarchical and more readable.
+
+37. What is Spring Boot Starter?
+
+Answer:
+Predefined dependency group.
+
+Example:
+
+spring-boot-starter-web
+
+38. What is Actuator?
+
+Answer:
+Provides monitoring and health endpoints.
+
+39. What is DevTools?
+
+Answer:
+Provides auto-restart and live reload.
+
+40. How to change server port?
+server.port=8081
+
+🔹 REST APIs
+41. What is REST?
+
+Answer:
+Representational State Transfer – architectural style for web services.
+
+42. HTTP methods in REST?
+
+Answer:
+
+GET
+
+POST
+
+PUT
+
+DELETE
+
+PATCH
+
+43. Difference between PUT and PATCH?
+
+Answer:
+
+PUT → Full update
+
+PATCH → Partial update
+
+44. What is Statelessness?
+
+Answer:
+Server does not store client state.
+
+45. What is HTTP Status Code?
+
+Answer:
+
+200 → OK
+
+201 → Created
+
+400 → Bad Request
+
+401 → Unauthorized
+
+404 → Not Found
+
+500 → Server Error
+
+46. What is @ResponseEntity?
+
+Answer:
+Used to control HTTP response body and status.
+
+47. What is HATEOAS?
+
+Answer:
+Hypermedia as the Engine of Application State.
+
+48. What is Content Negotiation?
+
+Answer:
+Client chooses response format (JSON/XML).
+
+49. What is CORS?
+
+Answer:
+Cross-Origin Resource Sharing.
+
+50. Difference between SOAP and REST?
+
+Answer:
+REST is lightweight and faster.
+
+🔹 Exception Handling
+51. What is Exception?
+
+Answer:
+Runtime abnormal condition.
+
+52. Checked vs Unchecked Exception?
+
+Answer:
+
+Checked → Compile time
+
+Unchecked → Runtime
+
+53. What is @ExceptionHandler?
+
+Answer:
+Handles exceptions at controller level.
+
+54. What is @ControllerAdvice?
+
+Answer:
+Global exception handling.
+
+55. What is Custom Exception?
+
+Answer:
+User-defined exception class.
+
+56. What is try-catch-finally?
+
+Answer:
+Exception handling block.
+
+57. Difference between throw and throws?
+
+Answer:
+
+throw → explicitly throw
+
+throws → declare exception
+
+58. What is RuntimeException?
+
+Answer:
+Unchecked exception.
+
+59. What is NullPointerException?
+
+Answer:
+Accessing null object.
+
+60. Best practice for exception handling in REST?
+
+Answer:
+Use @ControllerAdvice + proper HTTP status.
+
+🔹 Hibernate / JPA / ORM
+61. What is ORM?
+
+Answer:
+Object Relational Mapping converts Java objects to database tables.
+
+62. What is Hibernate?
+
+Answer:
+Hibernate is ORM framework implementing JPA.
+
+63. What is JPA?
+
+Answer:
+Java Persistence API – specification for ORM.
+
+64. Difference between Hibernate and JPA?
+
+Answer:
+Hibernate is implementation, JPA is specification.
+
+65. What is Entity?
+
+Answer:
+Entity represents a table.
+
+66. What is @Entity?
+
+Answer:
+Marks a class as JPA entity.
+
+67. What is @Id?
+
+Answer:
+Defines primary key.
+
+68. What is @GeneratedValue?
+
+Answer:
+Auto-generate primary key.
+
+69. GenerationType types?
+
+Answer:
+
+AUTO
+
+IDENTITY
+
+SEQUENCE
+
+TABLE
+
+70. What is @Column?
+
+Answer:
+Maps column.
+
+71. What is @Table?
+
+Answer:
+Maps table name.
+
+72. What is @OneToOne?
+
+Answer:
+One-to-one mapping.
+
+73. What is @OneToMany?
+
+Answer:
+One-to-many mapping.
+
+74. What is @ManyToOne?
+
+Answer:
+Many-to-one mapping.
+
+75. What is @ManyToMany?
+
+Answer:
+Many-to-many mapping.
+
+76. What is FetchType?
+
+Answer:
+
+EAGER
+
+LAZY ✅
+
+77. What is CascadeType?
+
+Answer:
+Controls child entity operations.
+
+78. What is @JoinColumn?
+
+Answer:
+Defines foreign key.
+
+79. What is @MappedSuperclass?
+
+Answer:
+Parent class mapping.
+
+80. What is @Embeddable?
+
+Answer:
+Reusable component.
+
+81. What is @Embedded?
+
+Answer:
+Embeds class.
+
+82. What is Hibernate Session?
+
+Answer:
+Session represents database interaction.
+
+83. Difference between save() and persist()?
+
+Answer:
+persist does not return ID.
+
+84. What is HQL?
+
+Answer:
+Hibernate Query Language.
+
+85. Difference between HQL and SQL?
+
+Answer:
+HQL uses entity names.
+
+86. What is Criteria API?
+
+Answer:
+Type-safe query API.
+
+87. What is First Level Cache?
+
+Answer:
+Session level cache.
+
+88. What is Second Level Cache?
+
+Answer:
+SessionFactory level cache.
+
+89. What is Dirty Checking?
+
+Answer:
+Auto update changed entity.
+
+90. What is LazyInitializationException?
+
+Answer:
+Accessing lazy data outside session.
+
+91. What is @Transactional?
+
+Answer:
+Manages transaction.
+
+92. What is optimistic locking?
+
+Answer:
+Uses versioning.
+
+93. What is pessimistic locking?
+
+Answer:
+Locks database row.
+
+94. What is @Version?
+
+Answer:
+Used for optimistic locking.
+
+95. What is ddl-auto?
+
+Answer:
+Controls schema generation.
+
+96. Values of ddl-auto?
+
+Answer:
+
+none
+
+update
+
+create
+
+create-drop
+
+97. What is Spring Data JPA?
+
+Answer:
+Simplifies JPA repository.
+
+98. What is JpaRepository?
+
+Answer:
+Provides CRUD methods.
+
+99. What is @Query?
+
+Answer:
+Custom query annotation.
+
+100. Why use ORM?
+
+Answer:
+
+Less boilerplate
+
+DB independent
+
+Faster development
+
+Maintainable code
