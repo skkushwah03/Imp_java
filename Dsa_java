@@ -1,0 +1,222 @@
+🔥 DSA Top 100 Interview Questions for Java Developers
+⏱️ Time & Space Complexity (10 Questions)
+
+What is Time Complexity?
+
+What is Space Complexity?
+
+What is Big-O Notation?
+
+Difference between Big-O, Big-Ω, Big-Θ
+
+Best, Worst, and Average case complexity
+
+Time complexity of single loop vs nested loop
+
+Time complexity of recursion
+
+How to calculate complexity of recursive functions?
+
+What is auxiliary space?
+
+Common complexities: O(1), O(log n), O(n), O(n log n), O(n²)
+
+📦 Arrays (15 Questions)
+
+Find maximum & minimum element in array
+
+Reverse an array
+
+Find second largest element
+
+Remove duplicates from sorted array
+
+Rotate array by K steps
+
+Find missing number in array
+
+Kadane’s Algorithm (Maximum Subarray Sum)
+
+Merge two sorted arrays
+
+Find duplicate number
+
+Move all zeros to end
+
+Check if array is sorted
+
+Find frequency of elements
+
+Two Sum problem
+
+Intersection of two arrays
+
+Majority Element (Moore’s Voting Algorithm)
+
+🔗 Linked List (10 Questions)
+
+What is Linked List? Types
+
+Reverse a linked list
+
+Detect loop in linked list
+
+Find middle of linked list
+
+Remove loop from linked list
+
+Merge two sorted linked lists
+
+Delete Nth node from end
+
+Check if linked list is palindrome
+
+Find length of loop
+
+Intersection point of two linked lists
+
+📚 Stack & Queue (10 Questions)
+
+What is Stack? Applications
+
+Implement stack using array
+
+Implement stack using linked list
+
+What is Queue? Types
+
+Implement queue using array
+
+Circular Queue
+
+Stack using two queues
+
+Queue using two stacks
+
+Valid Parentheses problem
+
+Next Greater Element
+
+🔑 Hashing (10 Questions)
+
+What is Hashing?
+
+HashMap vs Hashtable
+
+HashMap internal working (Java)
+
+Collision handling techniques
+
+Find frequency using HashMap
+
+Two Sum using HashMap
+
+First non-repeating character
+
+Check if two strings are anagrams
+
+Longest substring without repeating characters
+
+Count distinct elements in array
+
+🌳 Trees & BST (10 Questions)
+
+What is Binary Tree?
+
+What is Binary Search Tree?
+
+Inorder Traversal
+
+Preorder Traversal
+
+Postorder Traversal
+
+Height of binary tree
+
+Check if tree is BST
+
+Lowest Common Ancestor (LCA)
+
+Level Order Traversal
+
+Count leaf nodes
+
+🌐 Graphs (5 Questions)
+
+What is Graph?
+
+BFS Traversal
+
+DFS Traversal
+
+Detect cycle in graph
+
+Difference between BFS & DFS
+
+🔍 Searching & Sorting (10 Questions)
+
+Linear Search
+
+Binary Search
+
+Bubble Sort
+
+Selection Sort
+
+Insertion Sort
+
+Merge Sort
+
+Quick Sort
+
+Time complexity of sorting algorithms
+
+Stable vs Unstable sorting
+
+When to use which sorting algorithm
+
+🔁 Recursion & Backtracking (5 Questions)
+
+What is Recursion?
+
+Factorial using recursion
+
+Fibonacci using recursion
+
+Tower of Hanoi
+
+N-Queens Problem
+
+💰 Greedy Algorithm (5 Questions)
+
+What is Greedy Algorithm?
+
+Activity Selection Problem
+
+Coin Change (Greedy)
+
+Minimum platforms problem
+
+Job sequencing problem
+
+🧠 Dynamic Programming (10 Questions)
+
+What is Dynamic Programming?
+
+DP vs Recursion
+
+Fibonacci using DP
+
+0/1 Knapsack
+
+Longest Common Subsequence
+
+Longest Increasing Subsequence
+
+Coin Change (DP)
+
+Minimum Path Sum
+
+Climbing Stairs problem
+
+Matrix Chain Multiplication
