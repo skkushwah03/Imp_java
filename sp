@@ -1,0 +1,116 @@
+1. What is Spring Boot?
+✅ Simple Meaning:
+
+Spring Boot is a framework used to build Java web applications and REST APIs quickly without much configuration.
+
+✅ Key Points:
+
+Part of Spring Framework
+
+Removes XML configuration
+
+Provides auto-configuration
+
+Has embedded server (Tomcat)
+
+👉 Example: You can run app using just main() method.
+
+2. What is REST API?
+✅ Simple Meaning:
+
+REST API is a way for applications to communicate over the internet using HTTP.
+
+REST = Representational State Transfer
+
+✅ Example:
+
+When you open:
+
+https://api.weather.com
+
+
+It returns data → that's REST API.
+
+3. Difference between @Controller and @RestController
+Feature	@Controller	@RestController
+Returns	HTML Pages	JSON Data
+Used in	MVC apps	REST APIs
+Need @ResponseBody	Yes	No
+👉 Easy Trick:
+@RestController = @Controller + @ResponseBody
+
+4. What is @Autowired?
+✅ Meaning:
+
+It is used to automatically inject objects (dependencies) into a class.
+
+👉 Example:
+@Autowired
+UserService service;
+
+
+Spring automatically creates object.
+
+5. What are HTTP Methods?
+
+These are operations in REST API.
+
+Method	Use
+GET	Fetch data
+POST	Create data
+PUT	Update data
+DELETE	Remove data
+6. What is JSON?
+✅ Meaning:
+
+JSON = JavaScript Object Notation
+
+It is a data format used to send/receive data in APIs.
+
+👉 Example:
+{
+  "name": "Saurav",
+  "age": 22
+}
+
+7. What is Dependency Injection?
+✅ Meaning:
+
+A design pattern where object dependencies are provided by Spring, not created manually.
+
+👉 Without DI:
+UserService service = new UserService();
+
+👉 With DI:
+
+Spring automatically injects object using @Autowired.
+
+8. What is ResponseEntity?
+✅ Meaning:
+
+It is used to control HTTP response completely.
+
+You can set:
+
+Status code
+
+Headers
+
+Body
+
+👉 Example:
+return ResponseEntity.ok("Success");
+
+9. Difference between PUT and POST
+Feature	POST	PUT
+Use	Create new data	Update existing data
+Idempotent	No	Yes
+Example	Add user	Update user
+10. What is application.properties file used for?
+✅ Meaning:
+
+It is used to store configuration settings of Spring Boot app.
+
+👉 Example:
+server.port=8081
+spring.datasource.url=jdbc:mysql://localhost/db
