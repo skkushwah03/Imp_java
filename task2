@@ -1,0 +1,169 @@
+✅ 1. What is Spring Boot?
+
+👉 Definition:
+
+Spring Boot is a Java framework used to build standalone, production-ready applications quickly with minimal configuration.
+
+🧠 Simple Words:
+
+Spring Boot helps you create web applications fast without writing complex setup code.
+
+⭐ Key Features:
+
+• Auto Configuration
+• Embedded Server (Tomcat)
+• No XML configuration
+• Easy REST API development
+
+🎯 Interview One-Line Answer:
+
+Spring Boot is a framework that simplifies Spring application development using auto-configuration and embedded servers.
+
+✅ 2. What is REST API?
+
+👉 Definition:
+
+REST API is a way for different applications to communicate over HTTP using standard methods.
+
+🧠 Simple Meaning:
+
+It is a web service that allows client & server to exchange data.
+
+📌 Example:
+
+When mobile app requests data from server → REST API is used.
+
+⭐ HTTP Methods Used:
+
+GET → Fetch data
+POST → Create data
+PUT → Update data
+DELETE → Remove data
+
+✅ 3. Difference Between POST and PUT
+Feature	POST	PUT
+Purpose	Create new resource	Update existing resource
+Idempotent	❌ No	✅ Yes
+Used When	Adding new data	Updating data
+🧠 Easy Example:
+
+POST → Add new student
+PUT → Update student marks
+
+✅ 4. What is ResponseEntity?
+
+👉 Definition:
+
+ResponseEntity is a class in Spring used to send HTTP response with status, headers, and body.
+
+🧠 Why Used?
+
+It gives full control over API response.
+
+📌 Example:
+return ResponseEntity.ok("Success");
+
+
+This sends:
+
+Body → "Success"
+Status → 200 OK
+
+✅ 5. What is @RestController?
+
+👉 Definition:
+
+@RestController is an annotation that combines:
+
+@Controller + @ResponseBody
+
+🧠 Meaning:
+
+It tells Spring that this class will handle REST API requests.
+
+📌 Example:
+@RestController
+public class StudentController {
+}
+
+✅ 6. What is Validation?
+
+👉 Definition:
+
+Validation means checking if input data is correct, valid, and safe before processing.
+
+🧠 Example:
+
+Checking:
+
+• Email format
+• Marks between 0–100
+• Name not empty
+
+⭐ In Spring Boot:
+
+We use annotations like:
+
+@NotNull
+@NotBlank
+@Email
+@Size
+
+✅ 7. What is HTTP Status Code?
+
+👉 Definition:
+
+HTTP status codes are numbers sent by server to indicate result of request.
+
+⭐ Common Codes:
+Code	Meaning
+200	Success
+201	Created
+400	Bad Request
+404	Not Found
+500	Server Error
+✅ 8. What is JSON?
+
+👉 Definition:
+
+JSON (JavaScript Object Notation) is a lightweight data format used to exchange data.
+
+📌 Example:
+{
+  "id": 1,
+  "name": "Saurav",
+  "marks": 85
+}
+
+
+Spring Boot automatically converts Java objects ↔ JSON.
+
+✅ 9. What is MVC Architecture?
+
+👉 Definition:
+
+MVC is a design pattern that separates application into 3 parts.
+
+🧠 Components:
+Layer	Role
+Model	Data & business logic
+View	UI
+Controller	Handles request
+🎯 Flow:
+
+User → Controller → Service → Database → Response
+
+✅ 10. How Spring Boot Works?
+
+👉 Working Flow:
+
+1️⃣ Main class starts application
+2️⃣ Auto-configuration loads dependencies
+3️⃣ Embedded server starts (Tomcat)
+4️⃣ Controller handles requests
+5️⃣ Response returned as JSON
+
+🧠 Easy Flow Diagram:
+Client Request → Controller → Service → Repository → Database
+                                             ↓
+                                      JSON Response
