@@ -9,7 +9,7 @@ Part of Spring Framework
 
 Removes XML configuration
 
-Provides auto-configuration
+Provides auto-configuration     
 
 Has embedded server (Tomcat)
 
